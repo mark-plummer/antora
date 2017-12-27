@@ -1,0 +1,34 @@
+= Antora Documentation Website
+:uri-project: https://gitlab.com/antora/antora
+:uri-ui-project: https://gitlab.com/antora/antora-ui-default
+:uri-letsencrypt: https://letsencrypt.org
+:uri-gitlab-pages: https://about.gitlab.com/features/pages/
+
+This repository contains the playbook for the Antora documentation site published at https://docs.antora.org.
+
+The documentation components are located in the {uri-project}[Antora] and the {uri-ui-project}[Antora UI Default] repositories.
+The site uses the default Antora UI.
+
+== Documentation Site Quickstart (Pending)
+
+Instructions for building and generating the site will be added when the documentation is ready for release.
+
+== Hosting (Pending)
+
+This website is hosted using {uri-gitlab-pages}[GitLab Pages].
+The CI job that deploys the site is configured by the file [.path]_.gitlab-ci.yml_.
+
+== TLS Certificate (https) (Pending)
+
+The TLS certificate for this website was issued using {uri-letsencrypt}[Let's Encrypt].
+It was first created on 20xx-xx-xx using the `letsencrypt-auto` tool.
+
+// $ sudo ./letsencrypt-auto certonly -a manual -d antora.org
+ 
+// The certificate (PEM) and key (PEM) were then entered into the GitLab Pages configuration screen.
+
+Refer to the https://docs.gitlab.com/ee/user/project/pages/getting_started_part_three.html#ssl-tls-certificates[TLS Certificates] section in the GitLab Pages documentation for more details about this configuration.
+
+== Copyright
+
+Copyright (C) 2017 OpenDevise Inc. and the Antora Project.
