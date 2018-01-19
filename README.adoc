@@ -1,17 +1,24 @@
 = Antora Documentation Website
-:uri-project: https://gitlab.com/antora/antora
-:uri-ui-project: https://gitlab.com/antora/antora-ui-default
+// Project URIs:
+:uri-project: https://antora.org
+:uri-docs-site: https://docs.antora.org
+:uri-antora-repo: https://gitlab.com/antora/antora
+:uri-ui-repo: https://gitlab.com/antora/antora-ui-default
+// External URIs:
 :uri-letsencrypt: https://letsencrypt.org
 :uri-gitlab-pages: https://about.gitlab.com/features/pages/
+:uri-tls: https://docs.gitlab.com/ee/user/project/pages/getting_started_part_three.html#ssl-tls-certificates
+:uri-od: https://opendevise.com
 
-This repository contains the playbook for the Antora documentation site published at https://docs.antora.org.
+This repository contains the production playbook for the Antora Docs site published at {uri-docs-site}.
 
-The documentation components are located in the {uri-project}[Antora] and the {uri-ui-project}[Antora UI Default] repositories.
+The documentation components are located in the {uri-antora-repo}[Antora] and the {uri-ui-repo}[Antora UI Default] repositories.
 The site uses the default Antora UI.
 
-== Documentation Site Quickstart (Pending)
+== Docs Site Quickstart
 
-Instructions for building and generating the site will be added when the documentation is ready for release.
+To generate the Antora Docs site you need to {uri-antora-repo}/blob/master/README.adoc[install Antora].
+Once installed, run Antora with the playbook hosted in this repository.
 
 == Hosting (Pending)
 
@@ -24,11 +31,11 @@ The TLS certificate for this website was issued using {uri-letsencrypt}[Let's En
 It was first created on 20xx-xx-xx using the `letsencrypt-auto` tool.
 
 // $ sudo ./letsencrypt-auto certonly -a manual -d antora.org
- 
+
 // The certificate (PEM) and key (PEM) were then entered into the GitLab Pages configuration screen.
 
-Refer to the https://docs.gitlab.com/ee/user/project/pages/getting_started_part_three.html#ssl-tls-certificates[TLS Certificates] section in the GitLab Pages documentation for more details about this configuration.
+Refer to the {uri-tls}[TLS Certificates] section in the GitLab Pages documentation for more details about this configuration.
 
 == Copyright
 
-Copyright (C) 2017 OpenDevise Inc. and the Antora Project.
+Copyright (C) 2017-2018 {uri-od}[OpenDevise Inc.] and the {uri-project}[Antora Project].
