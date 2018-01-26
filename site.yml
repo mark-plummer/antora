@@ -2,7 +2,10 @@ site:
   title: Antora Docs
 content:
   sources:
-  - url: https://gitlab.com/antora/antora.git
+  - url: https://gitlab.com/antora/antora
+    branches: master
+    start_path: docs
+  - url: https://gitlab.com/antora/antora-ui-default
     branches: master
     start_path: docs
 ui:
