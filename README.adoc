@@ -32,7 +32,11 @@ The site will be generated into [.path]_public/_.
 This website is hosted using {uri-gitlab-pages}[GitLab Pages].
 The CI job that deploys the site is configured by the file [.path]_.gitlab-ci.yml_.
 
-== TLS Certificate (https)
+== Domain Name & TLS Certificate (https)
+
+The domain name for this site is configured using the following A record:
+
+ docs 3600 IN A 52.167.214.135
 
 The certificate for docs.antora.org was generatoed by {uri-letsencrypt}[Let's Encrypt] and is shared with the certificate for antora.org.
 See the https://gitlab.com/antora/antora.org/blob/master/README.adoc[antora.org README] for details about how it was generated and configured.
