@@ -7,7 +7,9 @@ cache:
 pages:
   stage: deploy
   script:
-  - $(npm bin)/antora site.yml
+  #- $(npm bin)/antora site.yml
+  - mkdir -p public/.well-known/acme-challenge
+  - echo 'VbVa9f0UILXeUqkY18Gsey0OOwCFK3ovJQkf21dmSB0.YIR3zqAOB9nJFH0HQrOnRxBk9PGCpjjVTKF9e9tYcEc' > public/.well-known/acme-challenge/VbVa9f0UILXeUqkY18Gsey0OOwCFK3ovJQkf21dmSB0
   artifacts:
     paths:
     - public
