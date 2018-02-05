@@ -1,41 +1,42 @@
-= Antora Documentation Website
+= Antora Documentation Site
+// Settings:
+:hide-uri-scheme:
 // Project URIs:
 :uri-project: https://antora.org
-:uri-docs-site: https://docs.antora.org
-:uri-antora-repo: https://gitlab.com/antora/antora
-:uri-ui-repo: https://gitlab.com/antora/antora-ui-default
+:uri-docs: https://docs.antora.org
+:uri-repo-core: https://gitlab.com/antora/antora
+:uri-repo-ui: https://gitlab.com/antora/antora-ui-default
 // External URIs:
-:uri-letsencrypt: https://letsencrypt.org
 :uri-gitlab-pages: https://about.gitlab.com/features/pages/
-:uri-tls: https://docs.gitlab.com/ee/user/project/pages/getting_started_part_three.html#ssl-tls-certificates
-:uri-od: https://opendevise.com
+:uri-letsencrypt: https://letsencrypt.org
+:uri-opendevise: https://opendevise.com
 
-This repository contains the production playbook for the Antora Docs site published at {uri-docs-site}.
+This repository contains the playbook project for the Antora documentation site published at {uri-docs}.
 
-The documentation components are located in the {uri-antora-repo}[Antora] and the {uri-ui-repo}[Antora UI Default] repositories.
-The site uses the default Antora UI.
+== Documentation Structure
 
-== Docs Site Quickstart
+The documentation components are pulled from the {uri-repo-core}[Antora (Core)] and the {uri-repo-ui}[Antora UI Default] repositories.
+The site uses the Antora Default UI for its UI.
 
-To generate the Antora Docs site you need to {uri-antora-repo}/blob/master/README.adoc[install Antora].
-Once installed, run Antora with the playbook hosted in this repository.
+== Quickstart
 
-== Hosting (Pending)
+To generate the Antora Docs site, you first need to {uri-repo-core}/blob/master/README.adoc[install Antora].
+Once Antora installed, run the `antora` command using the playbook file hosted in this repository.
+
+ $ antora site.yml
+
+The site will be generated into [.path]_public/_.
+
+== Hosting
 
 This website is hosted using {uri-gitlab-pages}[GitLab Pages].
 The CI job that deploys the site is configured by the file [.path]_.gitlab-ci.yml_.
 
-== TLS Certificate (https) (Pending)
+== TLS Certificate (https)
 
-The TLS certificate for this website was issued using {uri-letsencrypt}[Let's Encrypt].
-It was first created on 20xx-xx-xx using the `letsencrypt-auto` tool.
-
-// $ sudo ./letsencrypt-auto certonly -a manual -d antora.org
-
-// The certificate (PEM) and key (PEM) were then entered into the GitLab Pages configuration screen.
-
-Refer to the {uri-tls}[TLS Certificates] section in the GitLab Pages documentation for more details about this configuration.
+The certificate for docs.antora.org was generatoed by {uri-letsencrypt}[Let's Encrypt] and is shared with the certificate for antora.org.
+See the https://gitlab.com/antora/antora.org/blob/master/README.adoc[antora.org README] for details about how it was generated and configured.
 
 == Copyright
 
-Copyright (C) 2017-2018 {uri-od}[OpenDevise Inc.] and the {uri-project}[Antora Project].
+Copyright (C) 2017-2018 {uri-opendevise}[OpenDevise Inc.] and the {uri-project}[Antora Project].
