@@ -1,0 +1,15 @@
+image: node:8
+before_script:
+- yarn --cache-folder=.yarn-cache add @antora/cli @antora/site-generator-default > /dev/null
+cache:
+  paths:
+  - .yarn-cache
+pages:
+  stage: deploy
+  script:
+  - $(npm bin)/antora site.yml
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
