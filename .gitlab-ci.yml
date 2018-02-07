@@ -7,7 +7,7 @@ cache:
 pages:
   stage: deploy
   script:
-  #- $(npm bin)/antora site.yml
+  #- $(npm bin)/antora --google-analytics-key=UA-112324747-2 site.yml
   #- echo 'User-agent: *' > public/robots.txt
   # BEGIN temporary
   - mkdir -p public

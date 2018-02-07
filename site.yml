@@ -2,6 +2,8 @@ site:
   title: Antora Docs
   url: https://docs.antora.org
   start_page: antora::index
+  #keys:
+  #  google_analytics: UA-112324747-2
 content:
   sources:
   - url: https://gitlab.com/antora/antora
