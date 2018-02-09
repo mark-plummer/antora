@@ -6,10 +6,10 @@ site:
   #  google_analytics: UA-112324747-2
 content:
   sources:
-  - url: https://gitlab.com/antora/antora
+  - url: https://gitlab.com/antora/antora.git
     branches: master
     start_path: docs
-  - url: https://gitlab.com/antora/antora-ui-default
+  - url: https://gitlab.com/antora/antora-ui-default.git
     branches: master
     start_path: docs
 ui:
