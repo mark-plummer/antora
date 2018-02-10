@@ -2,15 +2,18 @@ site:
   title: Antora Docs
   url: https://docs.antora.org
   start_page: antora::index
+  #keys:
+  #  google_analytics: UA-112324747-2
 content:
   sources:
-  - url: https://gitlab.com/antora/antora
+  - url: https://gitlab.com/antora/antora.git
     branches: master
     start_path: docs
-  - url: https://gitlab.com/antora/antora-ui-default
+  - url: https://gitlab.com/antora/antora-ui-default.git
     branches: master
     start_path: docs
 ui:
   bundle: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+  supplemental_files: supplemental-ui
 output:
   dir: public
