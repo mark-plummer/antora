@@ -15,8 +15,8 @@ This repository contains the playbook project for the Antora documentation site 
 
 == Documentation Structure
 
-The documentation components are pulled from the {uri-repo-core}[Antora (Core)] and the {uri-repo-ui}[Antora UI Default] repositories.
-The site uses the Antora Default UI for its UI.
+The documentation components are pulled from the {uri-repo-core}[Antora Core] and {uri-repo-ui}[Antora Default UI] repositories.
+The site uses the Antora Default UI to generate its UI (i.e., the web pages).
 
 == Quickstart
 
@@ -26,6 +26,7 @@ Once Antora installed, run the `antora` command using the playbook file hosted i
  $ antora site.yml
 
 The site will be generated into [.path]_public/_.
+Navigate to the [.path]_public/index.html_ in your browser to view the site offline.
 
 == Hosting
 
