@@ -7,12 +7,8 @@ cache:
 pages:
   stage: deploy
   script:
-  #- $(npm bin)/antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify site.yml
-  #- echo 'User-agent: *' > public/robots.txt
-  # BEGIN temporary
-  - mkdir -p public
-  - echo '<!DOCTYPE html><html><body><h1>docs.antora.org</h1><p>Coming soon!</p></body></html>' > public/index.html
-  # END temporary
+  - $(npm bin)/antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify site.yml
+  - echo 'User-agent: *' > public/robots.txt
   artifacts:
     paths:
     - public
