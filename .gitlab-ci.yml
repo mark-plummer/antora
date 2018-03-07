@@ -1,14 +1,15 @@
 image: node:8
 before_script:
-- yarn --cache-folder=.yarn-cache add @antora/cli @antora/site-generator-default > /dev/null
+- yarn --cache-folder=.cache/yarn add @antora/cli @antora/site-generator-default > /dev/null
 cache:
   paths:
-  - .yarn-cache
+  - .cache
 pages:
   stage: deploy
   script:
   - $(npm bin)/antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify site.yml
   - "echo 'User-agent: *' > public/robots.txt"
+  - rm -rf .cache/antora/ui
   artifacts:
     paths:
     - public
