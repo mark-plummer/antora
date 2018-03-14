@@ -1,6 +1,6 @@
 image:
-  name: antora/antora:1.0.0-beta.1
-  entrypoint: ["/bin/sh", "-c"]
+  name: antora/antora:1.0.0-beta.2
+  entrypoint: [/bin/sh, -c]
 cache:
   paths:
   - .cache
@@ -9,7 +9,6 @@ pages:
   script:
   - antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify site.yml
   - "echo 'User-agent: *' > public/robots.txt"
-  - rm -rf .cache/antora/ui
   artifacts:
     paths:
     - public
