@@ -9,6 +9,7 @@ pages:
   script:
   - antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify --pull site.yml
   - "echo 'User-agent: *' > public/robots.txt"
+  - "echo '<!DOCTYPE html><html><title>Page Not Found</title><h1>Page Not Found</h1></html>' > public/404.html"
   artifacts:
     paths:
     - public
