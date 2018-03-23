@@ -1,5 +1,5 @@
 image:
-  name: antora/antora:1.0.0-beta.2
+  name: antora/antora:1.0.0-beta.3
   entrypoint: [/bin/sh, -c]
 cache:
   paths:
