@@ -4,6 +4,12 @@ site:
   title: Antora Docs
   url: https://docs.antora.org
   start_page: antora::index
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    linkattrs: ''
 content:
   sources:
   - url: https://gitlab.com/antora/antora.git
