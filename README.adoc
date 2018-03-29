@@ -4,6 +4,7 @@
 // Project URIs:
 :uri-project: https://antora.org
 :uri-docs: https://docs.antora.org
+:uri-install: {uri-docs}/antora/1.0/install/install-antora/
 :uri-repo-core: https://gitlab.com/antora/antora
 :uri-repo-ui: https://gitlab.com/antora/antora-ui-default
 // External URIs:
@@ -20,7 +21,7 @@ The site uses the Antora Default UI to generate its UI (i.e., the web pages).
 
 == Quickstart
 
-To generate the Antora Docs site, you first need to {uri-repo-core}/blob/master/README.adoc[install Antora].
+To generate the Antora Docs site, you first need to {uri-install}[install Antora].
 Once Antora is installed, run the `antora` command using the playbook file hosted in this repository.
 
  $ antora site.yml
@@ -44,7 +45,7 @@ See the https://gitlab.com/antora/antora.org/blob/master/README.adoc[antora.org 
 
 == Copyright and License
 
-Copyright (C) 2017-2018 by {uri-opendevise}[OpenDevise Inc.] and individual docs.antora.org contributors.
+Copyright (C) 2017-2018 {uri-opendevise}[OpenDevise Inc.] and the individual contributors to docs.antora.org.
 
-Except where otherwise noted, docs.antora.org, Antora, and the Antora default UI, are licensed under the https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License Version 2.0] (MPL-2.0).
+Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License Version 2.0] (MPL-2.0).
 See link:LICENSE[] to view the full license text.
