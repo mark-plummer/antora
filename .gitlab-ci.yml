@@ -4,17 +4,17 @@ image:
 cache:
   paths:
   - .cache/
-before_script:
-- yarn add netlify-cli -D --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
-- rm -f package.json
 deploy/netlify:
   stage: deploy
   only:
   - master@antora/docs.antora.org
+  before_script:
+  - yarn add netlify-cli -D --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
+  - rm -f package.json
   script:
   - antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify --pull site.yml
   - ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
-preview/gitlab-ci:
+deploy/preview:
   stage: deploy
   except:
   - master@antora/docs.antora.org
