@@ -1,0 +1,12 @@
+[build]
+  base = "netlify"
+  publish = "public"
+  command = "URL=$DEPLOY_URL node_modules/.bin/antora --html-url-extension-style=indexify --pull ../site.yml"
+
+[build.environment]
+  NODE_VERSION = "8"
+  BUILD_ONLY = "true"
+  ANTORA_CACHE_DIR = "node_modules/.cache/antora"
+
+[context.production.environment]
+  GOOGLE_ANALYTICS_KEY = "UA-112324747-2"
