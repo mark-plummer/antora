@@ -47,13 +47,12 @@ The deploy job on Netlify is configured by the file [.path]_netlify.toml_.
 This configuration files defines certain environment variables that control the behavior of Yarn and Antora.
 When the job runs, it switches to the [.path]_netlify/_ directory, runs `yarn`, then invokes `antora`.
 
-////
-The site is built on GitLab CI then deployed to Netlify using the Netlify CLI (command: `netlify`).
-The CI job that deploys the site to Netlify is configured by the file [.path]_.gitlab-ci.yml_.
-The secret variables required for deploying to Netlify (NETLIFY_SITE_ID and NETLIFY_ACCESS_TOKEN) are maintained in the CI configuration of this repository.
-////
+The Netlify deploy logs for antora.org can be viewed at {uri-netlify-deploys}.
 
-The deploy logs for antora.org can be viewed at {uri-netlify-deploys}.
+The site is also built nightly on GitLab CI.
+The CI job that runs nightly generates the site using Antora then deploys it to Netlify using the Netlify CLI (command: `netlify`).
+The nightly CI job is configured in the file [.path]_.gitlab-ci.yml_.
+The secret variables required for deploying to Netlify (NETLIFY_SITE_ID and NETLIFY_ACCESS_TOKEN) are passed by the scheduled job configuration.
 
 == Domain Name
 
