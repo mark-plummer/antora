@@ -50,9 +50,9 @@ When the job runs, it switches to the [.path]_netlify/_ directory, runs `yarn`, 
 The Netlify deploy logs for antora.org can be viewed at {uri-netlify-deploys}.
 
 The site is also built nightly on GitLab CI.
-The CI job that runs nightly generates the site using Antora then deploys it to Netlify using the Netlify CLI (command: `netlify`).
-The nightly CI job is configured in the file [.path]_.gitlab-ci.yml_.
-The secret variables required for deploying to Netlify (NETLIFY_SITE_ID and NETLIFY_ACCESS_TOKEN) are passed by the scheduled job configuration.
+Not only does this allow the site to be updated on a schedule, it also allows us to test the Antora Docker image.
+The nightly CI job, which is configured in the file [.path]_.gitlab-ci.yml_, generates the site using Antora then deploys it to Netlify using the Netlify CLI (command: `netlify`).
+The secret variables required for deploying to Netlify (NETLIFY_SITE_ID and NETLIFY_ACCESS_TOKEN) are defined on the scheduled job configuration page.
 
 == Domain Name
 
