@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "@antora/cli": "1.0.0",
-    "@antora/site-generator-default": "1.0.0"
-  }
-}
