@@ -3,7 +3,7 @@ runtime:
 site:
   title: Antora Docs
   url: https://docs.antora.org
-  start_page: antora::index
+  start_page: antora::index.adoc
 content:
   sources:
   - url: https://gitlab.com/antora/antora.git
