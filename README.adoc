@@ -34,16 +34,24 @@ Once Antora is installed, run the `antora` command using the playbook file hoste
  $ antora site.yml
 
 The site will be generated into [.path]_public/_.
-Navigate to the [.path]_public/index.html_ in your browser to view the site offline.
+Navigate to [.path]_public/index.html_ in your browser to view the site offline.
 
 == Hosting
 
 This site is hosted on {uri-netlify}[Netlify].
 It is managed by the account info [at] this domain.
 
+Deployment is triggered via a webhook on the master branch of the git repository (URL: https://api.netlify.com/hooks/gitlab, events: Push Events, Merge Requests Events).
+
+The deploy job on Netlify is configured by the file [.path]_netlify.toml_.
+This configuration files defines certain environment variables that control the behavior of Yarn and Antora.
+When the job runs, it switches to the [.path]_netlify/_ directory, runs `yarn`, then invokes `antora`.
+
+////
 The site is built on GitLab CI then deployed to Netlify using the Netlify CLI (command: `netlify`).
 The CI job that deploys the site to Netlify is configured by the file [.path]_.gitlab-ci.yml_.
 The secret variables required for deploying to Netlify (NETLIFY_SITE_ID and NETLIFY_ACCESS_TOKEN) are maintained in the CI configuration of this repository.
+////
 
 The deploy logs for antora.org can be viewed at {uri-netlify-deploys}.
 
