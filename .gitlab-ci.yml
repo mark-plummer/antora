@@ -4,12 +4,24 @@ image:
 cache:
   paths:
   - .cache/
-netlify:
+before_script:
+- yarn add netlify-cli -D --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
+- rm -f package.json
+deploy/netlify:
   stage: deploy
-  before_script:
-  - yarn global add netlify-cli > /dev/null
-  script:
-  - antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify --pull site.yml
-  - netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
   only:
   - master@antora/docs.antora.org
+  script:
+  - antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify --pull site.yml
+  - ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
+preview/gitlab-ci:
+  stage: deploy
+  except:
+  - master@antora/docs.antora.org
+  script:
+  - antora --html-url-extension-style=indexify --pull site.yml
+  # TODO need to figure out how to deploy a preview from an MR (needs access to secret variables)
+  #- ./node_modules/.bin/netlify deploy -d -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
+  artifacts:
+    paths:
+    - public/
