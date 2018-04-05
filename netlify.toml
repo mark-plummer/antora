@@ -13,3 +13,9 @@
 
 [context.deploy-preview]
   command = "URL=$DEPLOY_URL node_modules/.bin/antora --html-url-extension-style=indexify --pull ../site.yml"
+
+# we could switch to /_/* and use an indefinite age if we append a cache busters to the asset URLs
+[[headers]]
+  for = "/_/font/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
