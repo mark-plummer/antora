@@ -9,6 +9,8 @@
   ANTORA_CACHE_DIR = "node_modules/.cache/antora"
 
 [context.production.environment]
+  ALGOLIA_API_KEY = "47f6ef672cdc3d3e64709f68fae72956"
+  ALGOLIA_INDEX_NAME = "antora"
   GOOGLE_ANALYTICS_KEY = "UA-112324747-2"
 
 [context.deploy-preview]
