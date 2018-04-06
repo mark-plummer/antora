@@ -12,7 +12,7 @@
   GOOGLE_ANALYTICS_KEY = "UA-112324747-2"
 
 [context.deploy-preview]
-  command = "URL=$DEPLOY_URL node_modules/.bin/antora --html-url-extension-style=indexify --pull ../site.yml"
+  command = "URL=$DEPLOY_PRIME_URL node_modules/.bin/antora --html-url-extension-style=indexify --pull ../site.yml"
 
 # we could switch to /_/* and use an indefinite age if we append a cache buster to the asset URLs
 [[headers]]
