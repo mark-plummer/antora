@@ -14,8 +14,8 @@
 [context.deploy-preview]
   command = "URL=$DEPLOY_PRIME_URL node_modules/.bin/antora --html-url-extension-style=indexify --pull ../site.yml"
 
-# we could switch to /_/* and use an indefinite age if we append a cache buster to the asset URLs
-[[headers]]
-  for = "/_/font/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
+# netlify.toml does not get used for nightly deploys; use settings from _headers file instead
+#[[headers]]
+#  for = "/_/font/*"
+#  [headers.values]
+#    Cache-Control: "public,max-age=604800"
