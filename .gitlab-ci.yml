@@ -31,5 +31,8 @@ deploy/netlify:
   - yarn add netlify-cli --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
   - rm -f package.json
   script:
-  - antora --google-analytics-key=UA-112324747-2 --html-url-extension-style=indexify --pull site.yml
+  - export ALGOLIA_API_KEY=47f6ef672cdc3d3e64709f68fae72956
+  - export ALGOLIA_INDEX_NAME=antora
+  - export GOOGLE_ANALYTICS_KEY=UA-112324747-2
+  - antora --html-url-extension-style=indexify --pull site.yml
   - ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
