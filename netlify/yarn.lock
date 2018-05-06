@@ -2,70 +2,70 @@
 # yarn lockfile v1
 
 
-"@antora/asciidoc-loader@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/asciidoc-loader/-/asciidoc-loader-1.0.0.tgz#781be5dc610b5ae726515d30139314d93dba3c30"
+"@antora/asciidoc-loader@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/asciidoc-loader/-/asciidoc-loader-1.0.1.tgz#1a725deb290520691ef7766f248755928ec5fb36"
   dependencies:
-    asciidoctor.js "1.5.6-rc.1"
+    asciidoctor.js "1.5.6"
 
-"@antora/cli@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/cli/-/cli-1.0.0.tgz#f3668e5466bcab779afdb561c1ba7014f0e01e22"
+"@antora/cli@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/cli/-/cli-1.0.1.tgz#44857dcb9da7ce245b7e96c09c5cc57558efb989"
   dependencies:
-    "@antora/playbook-builder" "1.0.0"
+    "@antora/playbook-builder" "1.0.1"
     commander "^2.15.1"
 
-"@antora/content-aggregator@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/content-aggregator/-/content-aggregator-1.0.0.tgz#d2828104dcb5007f3fefa16a548b92b332d4eedb"
+"@antora/content-aggregator@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/content-aggregator/-/content-aggregator-1.0.1.tgz#a10c5d729d24169c7da01db4b4e8be546d2b7eb6"
   dependencies:
     "@antora/expand-path-helper" "^1.0.0"
     cache-directory "^2.0.0"
-    fs-extra "^5.0.0"
+    fs-extra "^6.0.0"
     js-yaml "^3.11.0"
-    lodash "^4.17.5"
+    lodash "^4.17.10"
     matcher "^1.1.0"
     mime-types "^2.1.18"
     multi-progress "^2.0.0"
-    nodegit "^0.21.2"
+    nodegit "^0.22.0"
     through2 "^2.0.3"
     vinyl "^2.1.0"
     vinyl-fs "^3.0.2"
 
-"@antora/content-classifier@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/content-classifier/-/content-classifier-1.0.0.tgz#f5f5761b768af0edc2a454c77a2cf91d06ed5aca"
+"@antora/content-classifier@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/content-classifier/-/content-classifier-1.0.1.tgz#2445deb35f81d3386e75d9d03279cf48afc46f40"
   dependencies:
-    lodash "^4.17.5"
+    lodash "^4.17.10"
     vinyl "^2.1.0"
 
-"@antora/document-converter@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/document-converter/-/document-converter-1.0.0.tgz#03617e9a4fc1d6c9ba529d9232cc7e1ad8c23046"
+"@antora/document-converter@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/document-converter/-/document-converter-1.0.1.tgz#2df13d0bfe3e3bba13349bcbe4c88064074adc36"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.0"
+    "@antora/asciidoc-loader" "1.0.1"
 
 "@antora/expand-path-helper@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@antora/expand-path-helper/-/expand-path-helper-1.0.0.tgz#3bfd6938ab86d4709af8d869cbf3bb17b8fe8912"
 
-"@antora/navigation-builder@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/navigation-builder/-/navigation-builder-1.0.0.tgz#d1eef11c17f11365dc3b572151d562688b78c33f"
+"@antora/navigation-builder@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/navigation-builder/-/navigation-builder-1.0.1.tgz#97ec7588e36b53e4546d2078f7ec9c8e06c8aef7"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.0"
+    "@antora/asciidoc-loader" "1.0.1"
 
-"@antora/page-composer@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/page-composer/-/page-composer-1.0.0.tgz#fab122a7f9fa3f8764f9f7c19b3409ce07f7ec20"
+"@antora/page-composer@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/page-composer/-/page-composer-1.0.1.tgz#b0b0c458265e2ac78d841b43a05b7b95bfad9cac"
   dependencies:
-    "@antora/content-classifier" "1.0.0"
+    "@antora/content-classifier" "1.0.1"
     handlebars "^4.0.11"
-    require-from-string "^2.0.1"
+    require-from-string "^2.0.2"
 
-"@antora/playbook-builder@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/playbook-builder/-/playbook-builder-1.0.0.tgz#eb448f3071d8a9090c83114cdee173ebe0ea8ea2"
+"@antora/playbook-builder@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/playbook-builder/-/playbook-builder-1.0.1.tgz#db5b78536ad618804159dde30aba59738b1d96a0"
   dependencies:
     camelcase-keys "^4.2.0"
     convict "^4.2.0"
@@ -74,58 +74,59 @@
     js-yaml "^3.11.0"
     json5 "^1.0.1"
 
-"@antora/redirect-producer@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/redirect-producer/-/redirect-producer-1.0.0.tgz#bb3ddf59225c17d67cef0be67aee1a43be17b894"
+"@antora/redirect-producer@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/redirect-producer/-/redirect-producer-1.0.1.tgz#4bdf09fb71f2f57f62e1f43a03c69df9db9a88b9"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.0"
+    "@antora/asciidoc-loader" "1.0.1"
     vinyl "^2.1.0"
 
-"@antora/site-generator-default@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/site-generator-default/-/site-generator-default-1.0.0.tgz#462ff38e5c98eb747632c94f4e8f2a4f31c7f976"
+"@antora/site-generator-default@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/site-generator-default/-/site-generator-default-1.0.1.tgz#5a344a16db4fe1508c0f91f787ed55cb32a6db7a"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.0"
-    "@antora/content-aggregator" "1.0.0"
-    "@antora/content-classifier" "1.0.0"
-    "@antora/document-converter" "1.0.0"
-    "@antora/navigation-builder" "1.0.0"
-    "@antora/page-composer" "1.0.0"
-    "@antora/playbook-builder" "1.0.0"
-    "@antora/redirect-producer" "1.0.0"
-    "@antora/site-mapper" "1.0.0"
-    "@antora/site-publisher" "1.0.0"
-    "@antora/ui-loader" "1.0.0"
+    "@antora/asciidoc-loader" "1.0.1"
+    "@antora/content-aggregator" "1.0.1"
+    "@antora/content-classifier" "1.0.1"
+    "@antora/document-converter" "1.0.1"
+    "@antora/navigation-builder" "1.0.1"
+    "@antora/page-composer" "1.0.1"
+    "@antora/playbook-builder" "1.0.1"
+    "@antora/redirect-producer" "1.0.1"
+    "@antora/site-mapper" "1.0.1"
+    "@antora/site-publisher" "1.0.1"
+    "@antora/ui-loader" "1.0.1"
 
-"@antora/site-mapper@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/site-mapper/-/site-mapper-1.0.0.tgz#4f037d566c35b62215c2987f4158ccd74838b596"
+"@antora/site-mapper@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/site-mapper/-/site-mapper-1.0.1.tgz#47b9252fc83f1f6afabde5c3997a00b6ce3db48e"
   dependencies:
-    "@antora/content-classifier" "1.0.0"
+    "@antora/content-classifier" "1.0.1"
     vinyl "^2.1.0"
 
-"@antora/site-publisher@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/site-publisher/-/site-publisher-1.0.0.tgz#6cf730657f67c33b565835025a59d2e304dde952"
+"@antora/site-publisher@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/site-publisher/-/site-publisher-1.0.1.tgz#aa0a9610987a1a5cd3aa535e9d687c130867390a"
   dependencies:
     "@antora/expand-path-helper" "^1.0.0"
-    fs-extra "^5.0.0"
+    fs-extra "^6.0.0"
     gulp-vinyl-zip "^2.1.0"
     vinyl "^2.1.0"
     vinyl-fs "^3.0.2"
 
-"@antora/ui-loader@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antora/ui-loader/-/ui-loader-1.0.0.tgz#e6a125bd5e295cd0f0c7f8c47cdf2a40df0726a3"
+"@antora/ui-loader@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antora/ui-loader/-/ui-loader-1.0.1.tgz#e7fc8cb8092d9e9b6c51ce155528f131648fe6f5"
   dependencies:
     "@antora/expand-path-helper" "^1.0.0"
     bl "^1.2.2"
     cache-directory "^2.0.0"
-    fs-extra "^5.0.0"
-    got "^8.3.0"
+    camelcase-keys "^4.2.0"
+    fs-extra "^6.0.0"
+    got "^8.3.1"
     gulp-vinyl-zip "^2.1.0"
     js-yaml "^3.11.0"
-    lodash "^4.17.5"
+    lodash "^4.17.10"
     minimatch-all "^1.1.0"
     through2 "^2.0.3"
     vinyl "^2.1.0"
@@ -212,11 +213,11 @@ asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
-asciidoctor.js@1.5.6-rc.1:
-  version "1.5.6-rc.1"
-  resolved "https://registry.yarnpkg.com/asciidoctor.js/-/asciidoctor.js-1.5.6-rc.1.tgz#8bdd07d817817e626bc3e2e09aa35500bfce4b3d"
+asciidoctor.js@1.5.6:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/asciidoctor.js/-/asciidoctor.js-1.5.6.tgz#12f4810c62ea47867da145e819fc93b0674b5431"
   dependencies:
-    opal-runtime "1.0.2"
+    opal-runtime "1.0.3"
 
 asn1@~0.2.3:
   version "0.2.3"
@@ -700,9 +701,9 @@ from@~0:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/from/-/from-0.1.7.tgz#83c60afc58b9c56997007ed1a768b3ab303a44fe"
 
-fs-extra@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+fs-extra@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.0.tgz#0f0afb290bb3deb87978da816fcd3c7797f3a817"
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
@@ -852,9 +853,9 @@ glob@^7.0.3, glob@^7.0.5, glob@^7.1.1:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-got@^8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/got/-/got-8.3.0.tgz#6ba26e75f8a6cc4c6b3eb1fe7ce4fec7abac8533"
+got@^8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/got/-/got-8.3.1.tgz#093324403d4d955f5a16a7a8d39955d055ae10ed"
   dependencies:
     "@sindresorhus/is" "^0.7.0"
     cacheable-request "^2.1.1"
@@ -1286,9 +1287,13 @@ lodash.isequal@^4.0.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
 
-lodash@^4.13.1, lodash@^4.17.5:
+lodash@^4.13.1:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
 longest@^1.0.1:
   version "1.0.1"
@@ -1398,7 +1403,7 @@ multi-progress@^2.0.0:
   dependencies:
     progress "^1.1.8"
 
-nan@^2.9.2:
+nan@^2.10.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
 
@@ -1442,13 +1447,13 @@ nodegit-promise@~4.0.0:
   dependencies:
     asap "~2.0.3"
 
-nodegit@^0.21.2:
-  version "0.21.2"
-  resolved "https://registry.yarnpkg.com/nodegit/-/nodegit-0.21.2.tgz#957c69a07a0afdeb21d1c69e9d3ad0a72e87acaa"
+nodegit@^0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/nodegit/-/nodegit-0.22.0.tgz#3b49f732f6c19091f05563f2cd7307871ee1973c"
   dependencies:
     fs-extra "~0.27.0"
     lodash "^4.13.1"
-    nan "^2.9.2"
+    nan "^2.10.0"
     node-gyp "^3.6.2"
     node-pre-gyp "~0.6.39"
     promisify-node "~0.3.0"
@@ -1533,9 +1538,9 @@ once@^1.3.0, once@^1.3.1, once@^1.3.2, once@^1.3.3, once@^1.4.0:
   dependencies:
     wrappy "1"
 
-opal-runtime@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/opal-runtime/-/opal-runtime-1.0.2.tgz#dae7669f23943b3f3fbba77b718a7e4977f4af73"
+opal-runtime@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/opal-runtime/-/opal-runtime-1.0.3.tgz#e81e5c2a2568bbb0b05743b427d035dd901485b7"
   dependencies:
     glob "6.0.4"
     xmlhttprequest "1.8.0"
@@ -1837,9 +1842,9 @@ request@2.81.0:
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
-require-from-string@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.1.tgz#c545233e9d7da6616e9d59adfb39fc9f588676ff"
+require-from-string@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
 
 resolve-options@^1.1.0:
   version "1.1.0"
