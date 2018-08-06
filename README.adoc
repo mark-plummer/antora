@@ -29,7 +29,7 @@ The site uses the Antora Default UI to generate its UI (i.e., the web pages).
 == Quickstart
 
 To generate the Antora Docs site, you first need to {uri-install}[install Antora].
-Once Antora is installed, run the `antora` command using the playbook file hosted in this repository.
+Once Antora is installed, run the `antora` command on the playbook file hosted in this repository.
 
  $ antora antora-playbook.yml
 
