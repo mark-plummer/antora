@@ -13,7 +13,7 @@ generate:
   except:
   - schedules
   script:
-  - antora --url=https://gitlab.com/$CI_PROJECT_PATH/-/jobs/$CI_JOB_ID/artifacts/browse/public --pull site.yml
+  - antora --url=https://gitlab.com/$CI_PROJECT_PATH/-/jobs/$CI_JOB_ID/artifacts/browse/public --pull antora-playbook.yml
   artifacts:
     expire_in: 1 week
     paths:
@@ -34,5 +34,5 @@ deploy/netlify:
   - export ALGOLIA_API_KEY=47f6ef672cdc3d3e64709f68fae72956
   - export ALGOLIA_INDEX_NAME=antora
   - export GOOGLE_ANALYTICS_KEY=UA-112324747-2
-  - antora --html-url-extension-style=indexify --pull site.yml
+  - antora --html-url-extension-style=indexify --pull antora-playbook.yml
   - ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public

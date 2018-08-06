@@ -31,7 +31,7 @@ The site uses the Antora Default UI to generate its UI (i.e., the web pages).
 To generate the Antora Docs site, you first need to {uri-install}[install Antora].
 Once Antora is installed, run the `antora` command using the playbook file hosted in this repository.
 
- $ antora site.yml
+ $ antora antora-playbook.yml
 
 The site will be generated into [.path]_public/_.
 Navigate to [.path]_public/index.html_ in your browser to view the site offline.

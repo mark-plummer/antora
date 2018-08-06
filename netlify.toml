@@ -1,7 +1,7 @@
 [build]
   base = "netlify"
   publish = "public"
-  command = "node_modules/.bin/antora --html-url-extension-style=indexify --pull ../site.yml"
+  command = "node_modules/.bin/antora --html-url-extension-style=indexify --pull ../antora-playbook.yml"
 
 [build.environment]
   NODE_VERSION = "8"
@@ -14,7 +14,7 @@
   GOOGLE_ANALYTICS_KEY = "UA-112324747-2"
 
 [context.deploy-preview]
-  command = "URL=$DEPLOY_PRIME_URL node_modules/.bin/antora --html-url-extension-style=indexify --pull ../site.yml"
+  command = "node_modules/.bin/antora --url $DEPLOY_PRIME_URL --html-url-extension-style=indexify --pull ../antora-playbook.yml"
 
 # netlify.toml does not get used for nightly deploys; use settings from _headers file instead
 #[[headers]]
