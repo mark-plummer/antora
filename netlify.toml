@@ -21,3 +21,8 @@ command = "node_modules/.bin/antora --url $DEPLOY_PRIME_URL --html-url-extension
 #for = "/_/font/*"
 #  [headers.values]
 #  Cache-Control = "public,max-age=604800"
+
+[[redirects]]
+from = "/antora/latest/*"
+to = "/antora/1.0/:splat"
+status = 307
