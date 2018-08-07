@@ -27,12 +27,16 @@ deploy/netlify:
   #  - $NETLIFY_SITE_ID
   only:
   - schedules
-  before_script:
-  - yarn add netlify-cli --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
-  - rm -f package.json
+  # strategy A: trigger a build on Netlify
   script:
-  - export ALGOLIA_API_KEY=47f6ef672cdc3d3e64709f68fae72956
-  - export ALGOLIA_INDEX_NAME=antora
-  - export GOOGLE_ANALYTICS_KEY=UA-112324747-2
-  - antora --html-url-extension-style=indexify --pull antora-playbook.yml
-  - ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
+  - curl -X POST -d '' $NETLIFY_BUILD_HOOK
+  # strategy B: run build locally and upload output to Netlify
+  #before_script:
+  #- yarn add netlify-cli --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
+  #- rm -f package.json
+  #script:
+  #- export ALGOLIA_API_KEY=47f6ef672cdc3d3e64709f68fae72956
+  #- export ALGOLIA_INDEX_NAME=antora
+  #- export GOOGLE_ANALYTICS_KEY=UA-112324747-2
+  #- antora --html-url-extension-style=indexify --pull antora-playbook.yml
+  #- ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
