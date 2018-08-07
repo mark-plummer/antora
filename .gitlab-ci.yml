@@ -28,6 +28,8 @@ deploy/netlify:
   only:
   - schedules
   # strategy A: trigger a build on Netlify
+  before_script:
+  - apk --no-cache -q add curl
   script:
   - curl -X POST -d '' $NETLIFY_BUILD_HOOK
   # strategy B: run build locally and upload output to Netlify
