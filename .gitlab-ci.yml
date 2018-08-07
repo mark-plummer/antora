@@ -31,7 +31,7 @@ deploy/netlify:
   before_script:
   - apk --no-cache -q add curl
   script:
-  - curl -X POST -d '' $NETLIFY_BUILD_HOOK
+  - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
   # strategy B: run build locally and upload output to Netlify
   #before_script:
   #- yarn add netlify-cli --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
