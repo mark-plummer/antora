@@ -17,6 +17,6 @@ var searchBox = docsearch({
   algoliaOptions: { hitsPerPage: 10 }
 }).autocomplete
 searchBox.on('autocomplete:closed', function () { searchBox.autocomplete.setVal() })
-window.addEventListener('load', function () { document.querySelector('#search-input').focus() })
+//window.addEventListener('load', function () { document.querySelector('#search-input').focus() })
 </script>
 {{/if}}
