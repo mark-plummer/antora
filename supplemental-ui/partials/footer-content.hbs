@@ -6,7 +6,8 @@
 <script src="{{uiRootPath}}/js/vendor/docsearch.min.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
-var searchBox = docsearch({
+function focusSearchInput () { document.querySelector('#search-input').focus() }
+var search = docsearch({
   {{#if env.ALGOLIA_APP_ID}}
   appId: '{{env.ALGOLIA_APP_ID}}',
   {{/if}}
@@ -16,7 +17,8 @@ var searchBox = docsearch({
   autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
 }).autocomplete
-searchBox.on('autocomplete:closed', function () { searchBox.autocomplete.setVal() })
-//window.addEventListener('load', function () { document.querySelector('#search-input').focus() })
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+focusSearchInput()
+window.addEventListener('load', focusSearchInput)
 </script>
 {{/if}}
