@@ -7,7 +7,7 @@ site:
 content:
   sources:
   - url: https://gitlab.com/antora/antora.git
-    branches: v1.0.x
+    branches: [master, v1.0.x]
     start_path: docs
   - url: https://gitlab.com/antora/antora-ui-default.git
     branches: master
