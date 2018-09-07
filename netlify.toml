@@ -24,5 +24,5 @@ command = "node_modules/.bin/antora --url $DEPLOY_PRIME_URL --html-url-extension
 
 [[redirects]]
 from = "/antora/latest/*"
-to = "/antora/1.0/:splat"
+to = "/antora/1.1/:splat"
 status = 302
