@@ -2,111 +2,110 @@
 # yarn lockfile v1
 
 
-"@antora/asciidoc-loader@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/asciidoc-loader/-/asciidoc-loader-1.0.3.tgz#fc12028ec354bc6345f32142c327083266546604"
+"@antora/asciidoc-loader@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/asciidoc-loader/-/asciidoc-loader-1.1.1.tgz#9281b6386d08ac882efb2e973fb865d8413464eb"
   dependencies:
     asciidoctor.js "1.5.6"
 
-"@antora/cli@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/cli/-/cli-1.0.3.tgz#398f9db7a67b2b17b86dfcb93089b1333113e1a2"
+"@antora/cli@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/cli/-/cli-1.1.1.tgz#f39f20cbee3ece67f3f61578b7a1a721b2faccf9"
   dependencies:
-    "@antora/playbook-builder" "1.0.3"
-    commander "^2.17.0"
+    "@antora/playbook-builder" "1.1.1"
+    commander "^2.18.0"
 
-"@antora/content-aggregator@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/content-aggregator/-/content-aggregator-1.0.3.tgz#8e52da60189d7acd53bf2d22e82dac4711a9f31b"
+"@antora/content-aggregator@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/content-aggregator/-/content-aggregator-1.1.1.tgz#e81a5ec58175e94f605d0908bdbe4729b439449f"
   dependencies:
     "@antora/expand-path-helper" "^1.0.0"
     cache-directory "^2.0.0"
     fs-extra "^7.0.0"
     js-yaml "^3.12.0"
-    lodash "^4.17.10"
+    lodash "^4.17.11"
     matcher "^1.1.1"
-    mime-types "^2.1.19"
+    mime-types "^2.1.20"
     multi-progress "^2.0.0"
     nodegit "^0.22.2"
     through2 "^2.0.3"
     vinyl "^2.2.0"
     vinyl-fs "^3.0.3"
 
-"@antora/content-classifier@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/content-classifier/-/content-classifier-1.0.3.tgz#cd8cdcd4ad87bce90b74303360511a8fbddb1c0a"
+"@antora/content-classifier@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/content-classifier/-/content-classifier-1.1.1.tgz#3ef192a94be46fd67644e27857425f3cc9bb9032"
   dependencies:
-    lodash "^4.17.10"
+    lodash "^4.17.11"
     vinyl "^2.2.0"
 
-"@antora/document-converter@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/document-converter/-/document-converter-1.0.3.tgz#48a3118c1fa7fa364c8cf47b996b680766123e17"
+"@antora/document-converter@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/document-converter/-/document-converter-1.1.1.tgz#bb64631383994ea3fa7b4850084a54473d096708"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.3"
+    "@antora/asciidoc-loader" "1.1.1"
 
 "@antora/expand-path-helper@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@antora/expand-path-helper/-/expand-path-helper-1.0.0.tgz#3bfd6938ab86d4709af8d869cbf3bb17b8fe8912"
 
-"@antora/navigation-builder@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/navigation-builder/-/navigation-builder-1.0.3.tgz#7cda95c3ea6c7634536ed7f21b0c2378303be8e7"
+"@antora/navigation-builder@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/navigation-builder/-/navigation-builder-1.1.1.tgz#1720f6ba33b62b34504fa714aba7e09eb5734299"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.3"
+    "@antora/asciidoc-loader" "1.1.1"
 
-"@antora/page-composer@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/page-composer/-/page-composer-1.0.3.tgz#8f59b3fcf29b3836ca1003a403d5b18757e2d8f8"
+"@antora/page-composer@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/page-composer/-/page-composer-1.1.1.tgz#612545737549404b106f5b3b925dff6fe20b34f6"
   dependencies:
-    "@antora/content-classifier" "1.0.3"
-    handlebars "^4.0.11"
+    handlebars "^4.0.12"
     require-from-string "^2.0.2"
 
-"@antora/playbook-builder@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/playbook-builder/-/playbook-builder-1.0.3.tgz#e086acd552646eb437f0151c7b89358ab3501c86"
+"@antora/playbook-builder@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/playbook-builder/-/playbook-builder-1.1.1.tgz#4e2763174d4b322f60469273ef01091f2fa9983d"
   dependencies:
     camelcase-keys "^4.2.0"
     convict "^4.3.2"
     cson-parser "^3.0.0"
     deep-freeze "^0.0.1"
     js-yaml "^3.12.0"
-    json5 "^1.0.1"
+    json5 "^2.0.1"
 
-"@antora/redirect-producer@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/redirect-producer/-/redirect-producer-1.0.3.tgz#2923cf05d7ab041287b3a8d2638e9035136421d1"
+"@antora/redirect-producer@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/redirect-producer/-/redirect-producer-1.1.1.tgz#66cdb6527ab787dd8a577faefd1a3bd0bf980680"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.3"
+    "@antora/asciidoc-loader" "1.1.1"
     vinyl "^2.2.0"
 
-"@antora/site-generator-default@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/site-generator-default/-/site-generator-default-1.0.3.tgz#888b8664e099ad987f4103317d874c44b961c1d1"
+"@antora/site-generator-default@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/site-generator-default/-/site-generator-default-1.1.1.tgz#ae1a3bf6c4cd52a5ae06ff504f05a2c2d075ee67"
   dependencies:
-    "@antora/asciidoc-loader" "1.0.3"
-    "@antora/content-aggregator" "1.0.3"
-    "@antora/content-classifier" "1.0.3"
-    "@antora/document-converter" "1.0.3"
-    "@antora/navigation-builder" "1.0.3"
-    "@antora/page-composer" "1.0.3"
-    "@antora/playbook-builder" "1.0.3"
-    "@antora/redirect-producer" "1.0.3"
-    "@antora/site-mapper" "1.0.3"
-    "@antora/site-publisher" "1.0.3"
-    "@antora/ui-loader" "1.0.3"
+    "@antora/asciidoc-loader" "1.1.1"
+    "@antora/content-aggregator" "1.1.1"
+    "@antora/content-classifier" "1.1.1"
+    "@antora/document-converter" "1.1.1"
+    "@antora/navigation-builder" "1.1.1"
+    "@antora/page-composer" "1.1.1"
+    "@antora/playbook-builder" "1.1.1"
+    "@antora/redirect-producer" "1.1.1"
+    "@antora/site-mapper" "1.1.1"
+    "@antora/site-publisher" "1.1.1"
+    "@antora/ui-loader" "1.1.1"
 
-"@antora/site-mapper@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/site-mapper/-/site-mapper-1.0.3.tgz#2d4ee7ece40b7ffeb0ed2ded0ef1b4ba0cb92e82"
+"@antora/site-mapper@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/site-mapper/-/site-mapper-1.1.1.tgz#9af5b0acba48b79d3d29187b6c93c323fa86ae00"
   dependencies:
-    "@antora/content-classifier" "1.0.3"
+    "@antora/content-classifier" "1.1.1"
     vinyl "^2.2.0"
 
-"@antora/site-publisher@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/site-publisher/-/site-publisher-1.0.3.tgz#04ec41760c9dc9270f3fde18618054e1e5293b5c"
+"@antora/site-publisher@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/site-publisher/-/site-publisher-1.1.1.tgz#5817d447936253543d185fc1913f4195f3ecc39e"
   dependencies:
     "@antora/expand-path-helper" "^1.0.0"
     fs-extra "^7.0.0"
@@ -114,19 +113,19 @@
     vinyl "^2.2.0"
     vinyl-fs "^3.0.3"
 
-"@antora/ui-loader@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@antora/ui-loader/-/ui-loader-1.0.3.tgz#d10a884df81495a8a3c42c3fb6dc4b8c53af0237"
+"@antora/ui-loader@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@antora/ui-loader/-/ui-loader-1.1.1.tgz#0aa9457e9ac6daa114696ec5a0f58e44d9a0e5f9"
   dependencies:
     "@antora/expand-path-helper" "^1.0.0"
     bl "^2.0.1"
     cache-directory "^2.0.0"
     camelcase-keys "^4.2.0"
     fs-extra "^7.0.0"
-    got "^9.0.0"
+    got "^9.2.1"
     gulp-vinyl-zip "^2.1.0"
     js-yaml "^3.12.0"
-    lodash "^4.17.10"
+    lodash "^4.17.11"
     minimatch-all "^1.1.0"
     through2 "^2.0.3"
     vinyl "^2.2.0"
@@ -138,6 +137,12 @@
   dependencies:
     symbol-observable "^1.2.0"
 
+"@szmarczak/http-timer@^1.1.0":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.1.tgz#6402258dfe467532b26649ef076b4d11f74fb612"
+  dependencies:
+    defer-to-connect "^1.0.1"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -148,18 +153,6 @@ ajv@^4.9.1:
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
-
-align-text@^0.1.1, align-text@^0.1.3:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/align-text/-/align-text-0.1.4.tgz#0cd90a561093f35d0a99256c22b7069433fad117"
-  dependencies:
-    kind-of "^3.0.2"
-    longest "^1.0.1"
-    repeat-string "^1.5.2"
-
-amdefine@>=0.0.4:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -230,9 +223,11 @@ assert-plus@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-0.2.0.tgz#d74e1b87e7affc0db8aadb7021f3fe48101ab234"
 
-async@^1.4.0:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
+async@^2.5.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
+  dependencies:
+    lodash "^4.17.10"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -304,12 +299,12 @@ cache-directory@^2.0.0:
   dependencies:
     xdg-basedir "^3.0.0"
 
-cacheable-request@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/cacheable-request/-/cacheable-request-4.0.1.tgz#c93bbb87d7c67c62738f2e336e4ff8e78d9533fa"
+cacheable-request@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/cacheable-request/-/cacheable-request-5.0.0.tgz#7ce347741c48d85c76bc41b78f6bf13e2907056d"
   dependencies:
     clone-response "^1.0.2"
-    get-stream "^3.0.0"
+    get-stream "^4.0.0"
     http-cache-semantics "^4.0.0"
     keyv "^3.0.0"
     lowercase-keys "^1.0.1"
@@ -324,10 +319,6 @@ camelcase-keys@^4.2.0:
     map-obj "^2.0.0"
     quick-lru "^1.0.0"
 
-camelcase@^1.0.2:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-1.2.1.tgz#9bb5304d2e0b56698b2c758b08a3eaa9daa58a39"
-
 camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
@@ -335,21 +326,6 @@ camelcase@^4.1.0:
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
-
-center-align@^0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/center-align/-/center-align-0.1.3.tgz#aa0d32629b6ee972200411cbd4461c907bc2b7ad"
-  dependencies:
-    align-text "^0.1.3"
-    lazy-cache "^1.0.3"
-
-cliui@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/cliui/-/cliui-2.1.0.tgz#4b475760ff80264c762c3a1719032e91c7fea0d1"
-  dependencies:
-    center-align "^0.1.1"
-    right-align "^0.1.1"
-    wordwrap "0.0.2"
 
 clone-buffer@^1.0.0:
   version "1.0.0"
@@ -403,7 +379,11 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.17.0:
+commander@^2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.18.0.tgz#2bf063ddee7c7891176981a2cc798e5754bc6970"
+
+commander@~2.17.1:
   version "2.17.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
 
@@ -458,10 +438,6 @@ debug@^2.2.0:
   dependencies:
     ms "2.0.0"
 
-decamelize@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
-
 decompress-response@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/decompress-response/-/decompress-response-3.3.0.tgz#80a4dd323748384bfa248083622aedec982adff3"
@@ -475,6 +451,10 @@ deep-extend@^0.6.0:
 deep-freeze@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/deep-freeze/-/deep-freeze-0.0.1.tgz#3a0b0005de18672819dfd38cd31f91179c893e84"
+
+defer-to-connect@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/defer-to-connect/-/defer-to-connect-1.0.1.tgz#41ec1dd670dc4c6dcbe7e54c9e44d784d025fe63"
 
 define-properties@^1.1.2:
   version "1.1.2"
@@ -709,9 +689,11 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-get-stream@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
+get-stream@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-4.0.0.tgz#9e074cb898bd2b9ebabb445a1766d7f43576d977"
+  dependencies:
+    pump "^3.0.0"
 
 getpass@^0.1.1:
   version "0.1.7"
@@ -798,16 +780,17 @@ glob@^7.0.3, glob@^7.0.5, glob@^7.1.1:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-got@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/got/-/got-9.0.0.tgz#8673d2838adbac8a2e4a07e5772e238c701e9b7c"
+got@^9.2.1:
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/got/-/got-9.2.1.tgz#dc2145dfa26ee8e33a9b22e0c54a630f1c2df0ae"
   dependencies:
     "@sindresorhus/is" "^0.11.0"
-    cacheable-request "^4.0.1"
+    "@szmarczak/http-timer" "^1.1.0"
+    cacheable-request "^5.0.0"
     decompress-response "^3.3.0"
     duplexer3 "^0.1.4"
-    get-stream "^3.0.0"
-    mimic-response "^1.0.0"
+    get-stream "^4.0.0"
+    mimic-response "^1.0.1"
     p-cancelable "^0.5.0"
     to-readable-stream "^1.0.0"
     url-parse-lax "^3.0.0"
@@ -838,15 +821,15 @@ gulp-vinyl-zip@^2.1.0:
     yauzl "^2.2.1"
     yazl "^2.2.1"
 
-handlebars@^4.0.11:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.11.tgz#630a35dfe0294bc281edae6ffc5d329fc7982dcc"
+handlebars@^4.0.12:
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
   dependencies:
-    async "^1.4.0"
+    async "^2.5.0"
     optimist "^0.6.1"
-    source-map "^0.4.4"
+    source-map "^0.6.1"
   optionalDependencies:
-    uglify-js "^2.6"
+    uglify-js "^3.1.4"
 
 har-schema@^1.0.5:
   version "1.0.5"
@@ -1071,9 +1054,15 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
-json5@1.0.1, json5@^1.0.1:
+json5@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
+  dependencies:
+    minimist "^1.2.0"
+
+json5@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.0.1.tgz#3d6d0d1066039eb50984e66a7840e4f4b7a2c660"
   dependencies:
     minimist "^1.2.0"
 
@@ -1124,10 +1113,6 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-lazy-cache@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
-
 lazystream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lazystream/-/lazystream-1.0.0.tgz#f6995fe0f820392f61396be89462407bb77168e4"
@@ -1152,9 +1137,9 @@ lodash@^4.13.1, lodash@^4.17.10:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
-longest@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
+lodash@^4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
 lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
   version "1.0.1"
@@ -1206,13 +1191,23 @@ mime-db@~1.35.0:
   version "1.35.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.35.0.tgz#0569d657466491283709663ad379a99b90d9ab47"
 
-mime-types@^2.1.12, mime-types@^2.1.19, mime-types@~2.1.7:
+mime-db@~1.36.0:
+  version "1.36.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.36.0.tgz#5020478db3c7fe93aad7bbcc4dcf869c43363397"
+
+mime-types@^2.1.12, mime-types@~2.1.7:
   version "2.1.19"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.19.tgz#71e464537a7ef81c15f2db9d97e913fc0ff606f0"
   dependencies:
     mime-db "~1.35.0"
 
-mimic-response@^1.0.0:
+mime-types@^2.1.20:
+  version "2.1.20"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.20.tgz#930cb719d571e903738520f8470911548ca2cc19"
+  dependencies:
+    mime-db "~1.36.0"
+
+mimic-response@^1.0.0, mimic-response@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
 
@@ -1496,6 +1491,13 @@ pump@^2.0.0:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
+pump@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
+  dependencies:
+    end-of-stream "^1.1.0"
+    once "^1.3.1"
+
 pumpify@^1.3.5:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/pumpify/-/pumpify-1.5.1.tgz#36513be246ab27570b1a374a5ce278bfd74370ce"
@@ -1644,12 +1646,6 @@ responselike@^1.0.2:
   dependencies:
     lowercase-keys "^1.0.0"
 
-right-align@^0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/right-align/-/right-align-0.1.3.tgz#61339b722fe6a3515689210d24e14c96148613ef"
-  dependencies:
-    align-text "^0.1.1"
-
 rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
@@ -1686,15 +1682,9 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-source-map@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
-  dependencies:
-    amdefine ">=0.0.4"
-
-source-map@~0.5.1:
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
+source-map@^0.6.1, source-map@~0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
 split@0.3:
   version "0.3.3"
@@ -1878,18 +1868,12 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-uglify-js@^2.6:
-  version "2.8.29"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
+uglify-js@^3.1.4:
+  version "3.4.9"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
   dependencies:
-    source-map "~0.5.1"
-    yargs "~3.10.0"
-  optionalDependencies:
-    uglify-to-browserify "~1.0.0"
-
-uglify-to-browserify@~1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
+    commander "~2.17.1"
+    source-map "~0.6.1"
 
 uid-number@^0.0.6:
   version "0.0.6"
@@ -2031,14 +2015,6 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
-window-size@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
-
-wordwrap@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
-
 wordwrap@~0.0.2:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
@@ -2064,15 +2040,6 @@ yargs-parser@10.1.0:
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-10.1.0.tgz#7202265b89f7e9e9f2e5765e0fe735a905edbaa8"
   dependencies:
     camelcase "^4.1.0"
-
-yargs@~3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-3.10.0.tgz#f7ee7bd857dd7c1d2d38c0e74efbd681d1431fd1"
-  dependencies:
-    camelcase "^1.0.2"
-    cliui "^2.1.0"
-    decamelize "^1.0.0"
-    window-size "0.1.0"
 
 yauzl@^2.2.1:
   version "2.10.0"
