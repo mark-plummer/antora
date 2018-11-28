@@ -16,7 +16,7 @@ GOOGLE_ANALYTICS_KEY = "UA-112324747-2"
 [context.deploy-preview]
 command = "NODE_PATH=node_modules node_modules/.bin/antora --pull --generator=../generator/xref-validator.js ../antora-playbook.yml && node_modules/.bin/antora --url $DEPLOY_PRIME_URL --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml"
 
-# netlify.toml does not get used for nightly deploys; use settings from _headers file instead
+# use settings from _headers file to allow use of netlify command (not currently used)
 #[[headers]]
 #for = "/_/font/*"
 #  [headers.values]
