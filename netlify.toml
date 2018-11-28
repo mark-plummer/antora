@@ -23,12 +23,12 @@ command = "NODE_PATH=node_modules node_modules/.bin/antora --pull --generator=..
 #  Cache-Control = "public,max-age=604800"
 
 [[redirects]]
-from = "/antora/latest/*"
-to = "/antora/1.1/:splat"
-status = 302
-
-[[redirects]]
 from = "https://antora-docs.netlify.com/*"
 to = "https://docs.antora.org/:splat"
 status = 301
 force = true
+
+[[redirects]]
+from = "/antora/latest/*"
+to = "/antora/1.1/:splat"
+status = 302
