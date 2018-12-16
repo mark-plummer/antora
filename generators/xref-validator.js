@@ -6,12 +6,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /**
- * Scans converted pages and navigation files for broken xrefs; if any broken
- * xrefs are detected, outputs a report and exits with a failure code.
+ * Scans converted pages and navigation files for broken xrefs. If any broken xrefs are detected, it
+ * prints a report and exits with a failure code.
  *
- * Usage (from root of playbook repository):
+ * This generator does not output a site (despite its type).
  *
- *  $ NODE_PATH=netlify/node_modules antora --pull --generator=./generator/xref-validator.js antora-playbook.yml
+ * Usage (from the root of the playbook repository):
+ *
+ *  $ antora --pull --generator=./generators/xref-validator.js antora-playbook.yml
+ *
+ * If you've installed Antora globally using Yarn, then $(yarn global dir)/node_modules must be
+ * listed in your NODE_PATH environment variable.
  */
 const aggregateContent = require('@antora/content-aggregator')
 const buildPlaybook = require('@antora/playbook-builder')
