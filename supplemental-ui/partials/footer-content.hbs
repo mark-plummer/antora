@@ -12,7 +12,7 @@ var search = docsearch({
   appId: '{{env.ALGOLIA_APP_ID}}',
   {{/if}}
   apiKey: '{{env.ALGOLIA_API_KEY}}',
-  indexName: '{{env.ALGOLIA_INDEX_NAME}}',
+  indexName: '{{env.ALGOLIA_IDX_NAME}}',
   inputSelector: '#search-input',
   autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
