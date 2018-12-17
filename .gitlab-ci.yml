@@ -1,52 +1,42 @@
-image:
-  name: antora/antora:1.1.1
-  entrypoint: [/bin/sh, -c]
-cache:
-  paths:
-  - .cache/
+# generate job triggered by commit; Netlify build triggered by same event
 generate:
   stage: build
-  # variables is not yet supported by gitlab.com
-  #except:
-  #  variables:
-  #  - $NETLIFY_SITE_ID
-  except:
-  - schedules
+  except: 
+    refs:
+    - schedules
+    - triggers
+  image:
+    name: antora/antora:1.1.1
+    entrypoint: [/bin/sh, -c]
+  cache:
+    paths:
+    - .cache/
   script:
   - antora --url=https://gitlab.com/$CI_PROJECT_PATH/-/jobs/$CI_JOB_ID/artifacts/browse/public --pull antora-playbook.yml
   artifacts:
     expire_in: 1 week
     paths:
     - public/
-# deploy/netlify job is triggered by nightly schedule
-deploy/netlify:
-  stage: deploy
-  # variables is not yet supported by gitlab.com
-  #only:
-  #  variables:
-  #  - $NETLIFY_SITE_ID
+# deploy/netlify job triggered by nightly schedule
+trigger/netlify:
+  stage: build
   only:
-  - schedules
-  # strategy A: trigger a build on Netlify
-  before_script:
-  - apk --no-cache -q add curl
+    refs:
+    - schedules
+    variables:
+    - $NETLIFY_BUILD_HOOK
+  image:
+    # NOTE reuse antora/antora once it provides curl
+    name: byrnedo/alpine-curl
+    entrypoint: [/bin/sh, -c]
   script:
   - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
-  # strategy B: run build locally and upload output to Netlify
-  #before_script:
-  #- yarn add netlify-cli --prefer-offline --cache-folder .cache/yarn --no-lockfile > /dev/null
-  #- rm -f package.json
-  #script:
-  #- export ALGOLIA_API_KEY=47f6ef672cdc3d3e64709f68fae72956
-  #- export ALGOLIA_INDEX_NAME=antora
-  #- export GOOGLE_ANALYTICS_KEY=UA-112324747-2
-  #- antora --html-url-extension-style=indexify --pull antora-playbook.yml
-  #- ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
-# index job is triggered when Netlify deploy succeeds
+# index job triggered when Netlify deploy succeeds
 index:
   stage: build
   only:
-    refs: [triggers]
+    refs:
+    - triggers
     variables:
     # TRIGGER_ACTION defined by outgoing webhook in Netlify
     - $TRIGGER_ACTION == "index"
@@ -56,7 +46,6 @@ index:
   image:
     name: algolia/docsearch-scraper
     entrypoint: [""]
-  cache: {}
   variables:
     APPLICATION_ID: $ALGOLIA_APP_ID
     API_KEY: $ALGOLIA_API_KEY
