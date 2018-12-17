@@ -18,7 +18,7 @@ generate:
     expire_in: 1 week
     paths:
     - public/
-# deploy/netlify is used by nightly job
+# deploy/netlify job is triggered by nightly schedule
 deploy/netlify:
   stage: deploy
   # variables is not yet supported by gitlab.com
@@ -42,3 +42,36 @@ deploy/netlify:
   #- export GOOGLE_ANALYTICS_KEY=UA-112324747-2
   #- antora --html-url-extension-style=indexify --pull antora-playbook.yml
   #- ./node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
+# index job is triggered when Netlify deploy succeeds
+index:
+  stage: build
+  only:
+    refs: [triggers]
+    variables:
+    # TRIGGER_ACTION defined by outgoing webhook in Netlify
+    - $TRIGGER_ACTION == "index"
+    # ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
+    - $ALGOLIA_APP_ID
+    - $ALGOLIA_API_KEY
+  image:
+    name: algolia/docsearch-scraper
+    entrypoint: [""]
+  cache: {}
+  variables:
+    APPLICATION_ID: $ALGOLIA_APP_ID
+    API_KEY: $ALGOLIA_API_KEY
+    CONFIG: $CI_PROJECT_DIR/docsearch/config.json
+  before_script:
+  - apt-get -qq update
+  - apt-get install -y jq > /dev/null
+  script:
+  - cd /root
+  - sed -i '/config[.]update_nb_hits/d' src/index.py
+  - ALGOLIA_IDX_NAME=$(cat $CONFIG | jq -r '.index_name')
+  - INDEXING_IN_PROGRESS=$(curl -s -H "X-Algolia-Application-Id:$ALGOLIA_APP_ID" -H "X-Algolia-API-Key:$ALGOLIA_API_KEY" "https://$ALGOLIA_APP_ID-dsn.algolia.net/1/indexes/${ALGOLIA_IDX_NAME}_tmp" | jq -r '.status? != 404')
+  - |
+    if [ "$INDEXING_IN_PROGRESS" == "true" ]; then
+      echo "Indexing already in progress. Skipping."
+      exit 0
+    fi
+  - pipenv run python -m src.index
