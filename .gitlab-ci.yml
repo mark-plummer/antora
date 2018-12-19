@@ -41,14 +41,14 @@ index:
     variables:
     # TRIGGER_ACTION defined by outgoing webhook in Netlify
     - $TRIGGER_ACTION == "index"
-  except:
-    refs:
-    - merge_requests
-    # variables use OR logic
-    #variables:
-    ## ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
-    #- $ALGOLIA_APP_ID == null
-    #- $ALGOLIA_API_KEY == null
+  #except:
+  #  refs:
+  #  - merge_requests
+  #  # variables use OR logic
+  #  #variables:
+  #  ## ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
+  #  #- $ALGOLIA_APP_ID == null
+  #  #- $ALGOLIA_API_KEY == null
   image:
     name: algolia/docsearch-scraper
     entrypoint: [""]
