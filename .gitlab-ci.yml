@@ -31,22 +31,24 @@ trigger/netlify:
     entrypoint: [/bin/sh, -c]
   script:
   - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
-# index job triggered when Netlify deploy succeeds
+# index job triggered when production Netlify deploy succeeds
+# (CI_PIPELINE_SOURCE=trigger, TRIGGER_ACTION=index, and CI_COMMIT_REF_NAME=master)
 index:
   stage: build
-  #only:
-  #  refs:
-  #  - triggers
-  except:
-    # variables use OR logic
+  only:
+    refs:
+    - triggers
     variables:
-    - $CI_PIPELINE_SOURCE =~ /^(?!trigger$)./
-    - $CI_COMMIT_REF_NAME =~ /^(?!not-master$)./
     # TRIGGER_ACTION defined by outgoing webhook in Netlify
-    - $TRIGGER_ACTION =~ /^(?!index$)./
-    # ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
-    - $ALGOLIA_APP_ID == null
-    - $ALGOLIA_API_KEY == null
+    - $TRIGGER_ACTION == "index"
+  except:
+    refs:
+    - merge_requests
+    # variables use OR logic
+    #variables:
+    ## ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
+    #- $ALGOLIA_APP_ID == null
+    #- $ALGOLIA_API_KEY == null
   image:
     name: algolia/docsearch-scraper
     entrypoint: [""]
@@ -58,7 +60,7 @@ index:
   - apt-get -qq update
   - apt-get install -y jq > /dev/null
   script:
-  - echo done
+  - echo index
   #- cd /root
   ## TODO remove workaround once https://github.com/algolia/docsearch-scraper/issues/425 is resolved
   #- sed -i '/config[.]update_nb_hits/d' src/index.py
