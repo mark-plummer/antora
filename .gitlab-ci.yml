@@ -38,7 +38,7 @@ index:
     refs:
     - triggers
     variables:
-    - $CI_COMMIT_REF_NAME == "not-master"
+    - $CI_COMMIT_REF_NAME == "is-not-master"
     # TRIGGER_ACTION defined by outgoing webhook in Netlify
     - $TRIGGER_ACTION == "index"
     # ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
