@@ -1,7 +1,7 @@
 [build]
 base = "netlify"
 publish = "public"
-command = "NODE_PATH=node_modules node_modules/.bin/antora --pull --generator=../generators/xref-validator.js ../antora-playbook.yml && node_modules/.bin/antora --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml"
+command = "echo $COMMIT_REF && echo $BRANCH && NODE_PATH=node_modules node_modules/.bin/antora --pull --generator=../generators/xref-validator.js ../antora-playbook.yml && node_modules/.bin/antora --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml"
 
 [build.environment]
 NODE_VERSION = "10"

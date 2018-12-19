@@ -54,7 +54,7 @@ index:
   - apt-get -qq update
   - apt-get install -y jq > /dev/null
   script:
-  - echo $TRIGGER_CONTEXT
+  - echo done
   #- cd /root
   ## TODO remove workaround once https://github.com/algolia/docsearch-scraper/issues/425 is resolved
   #- sed -i '/config[.]update_nb_hits/d' src/index.py
