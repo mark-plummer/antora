@@ -34,16 +34,19 @@ trigger/netlify:
 # index job triggered when Netlify deploy succeeds
 index:
   stage: build
-  only:
-    refs:
-    - triggers
+  #only:
+  #  refs:
+  #  - triggers
+  except:
+    # variables use OR logic
     variables:
-    - $CI_COMMIT_REF_NAME == "is-not-master"
+    - $CI_PIPELINE_SOURCE != "trigger"
+    - $CI_COMMIT_REF_NAME != "master"
     # TRIGGER_ACTION defined by outgoing webhook in Netlify
-    - $TRIGGER_ACTION == "index"
+    - $TRIGGER_ACTION != "index"
     # ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
-    - $ALGOLIA_APP_ID
-    - $ALGOLIA_API_KEY
+    - $ALGOLIA_APP_ID == null
+    - $ALGOLIA_API_KEY == null
   image:
     name: algolia/docsearch-scraper
     entrypoint: [""]
