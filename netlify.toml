@@ -4,7 +4,7 @@ publish = "public"
 command = """\
 NODE_PATH=node_modules node_modules/.bin/antora --pull --generator=../generators/xref-validator.js ../antora-playbook.yml && \
 node_modules/.bin/antora --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml && \
-curl -o /dev/null -s -X POST -F "token=$INDEX_WEBHOOK_TOKEN" -F "ref=$BRANCH" -F "variables[TRIGGER_ACTION]=index" https://gitlab.com/api/v4/projects/4995976/trigger/pipeline\
+curl -o /dev/null -s -X POST -F "token=$INDEX_WEBHOOK_TOKEN" -F "ref=$BRANCH" -F "variables[TRIGGER_ACTION]=index" $INDEX_WEBHOOK_URL\
 """
 
 [build.environment]
