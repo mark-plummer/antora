@@ -49,7 +49,7 @@ index:
     - $ALGOLIA_APP_ID == null
     - $ALGOLIA_API_KEY == null
   image:
-    name: algolia/docsearch-scraper
+    name: algolia/docsearch-scraper:steady
     entrypoint: [""]
   variables:
     APPLICATION_ID: $ALGOLIA_APP_ID
