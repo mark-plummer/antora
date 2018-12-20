@@ -32,7 +32,8 @@ trigger/netlify:
   script:
   - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
 # index job triggered when production Netlify deploy succeeds
-# (CI_PIPELINE_SOURCE=trigger, TRIGGER_ACTION=index, and CI_COMMIT_REF_NAME=master)
+# CI_PIPELINE_SOURCE=trigger, TRIGGER_ACTION=index, and CI_COMMIT_REF_NAME=master
+# a trigger cannot see merge requests, so there's no concern of them triggering this job
 index:
   stage: build
   only:
@@ -41,14 +42,12 @@ index:
     variables:
     # TRIGGER_ACTION defined by outgoing webhook in Netlify
     - $TRIGGER_ACTION == "index"
-  #except:
-  #  refs:
-  #  - merge_requests
-  #  # variables use OR logic
-  #  #variables:
-  #  ## ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
-  #  #- $ALGOLIA_APP_ID == null
-  #  #- $ALGOLIA_API_KEY == null
+  except:
+    # variables use OR logic
+    variables:
+    # ALGOLIA_APP_ID and ALGOLIA_API_KEY defined in CI configuration
+    - $ALGOLIA_APP_ID == null
+    - $ALGOLIA_API_KEY == null
   image:
     name: algolia/docsearch-scraper
     entrypoint: [""]
@@ -60,16 +59,13 @@ index:
   - apt-get -qq update
   - apt-get install -y jq > /dev/null
   script:
-  - echo index
-  #- cd /root
-  ## TODO remove workaround once https://github.com/algolia/docsearch-scraper/issues/425 is resolved
-  #- sed -i '/config[.]update_nb_hits/d' src/index.py
-  #- ALGOLIA_IDX_NAME=$(cat $CONFIG | jq -r '.index_name')
-  ## TODO remove workaround once https://github.com/algolia/docsearch-scraper/issues/426 is resolved
-  #- INDEXING_IN_PROGRESS=$(curl -s -H "X-Algolia-Application-Id:$ALGOLIA_APP_ID" -H "X-Algolia-API-Key:$ALGOLIA_API_KEY" "https://$ALGOLIA_APP_ID-dsn.algolia.net/1/indexes/${ALGOLIA_IDX_NAME}_tmp" | jq -r '.status? != 404')
-  #- |
-  #  if [ "$INDEXING_IN_PROGRESS" == "true" ]; then
-  #    echo "Indexing already in progress. Skipping."
-  #    exit 0
-  #  fi
-  #- pipenv run python -m src.index
+  # just to be safe, verify the ref name is master; exit otherwise
+  - if [ "$CI_COMMIT_REF_NAME" != "master" ]; then exit 0; fi
+  - cd /root
+  # TODO remove workaround once https://github.com/algolia/docsearch-scraper/issues/425 is resolved
+  - sed -i '/config[.]update_nb_hits/d' src/index.py
+  - ALGOLIA_IDX_NAME=$(cat $CONFIG | jq -r '.index_name')
+  # TODO remove workaround once https://github.com/algolia/docsearch-scraper/issues/426 is resolved
+  - INDEXING_IN_PROGRESS=$(curl -s -H "X-Algolia-Application-Id:$ALGOLIA_APP_ID" -H "X-Algolia-API-Key:$ALGOLIA_API_KEY" "https://$ALGOLIA_APP_ID-dsn.algolia.net/1/indexes/${ALGOLIA_IDX_NAME}_tmp" | jq -r '.status? != 404')
+  - if [ "$INDEXING_IN_PROGRESS" == "true" ]; then echo "Indexing already in progress. Skipping."; exit 0; fi
+  - pipenv run python -m src.index
