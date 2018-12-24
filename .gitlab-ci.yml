@@ -1,4 +1,4 @@
-# generate job triggered by commit; Netlify build triggered by same event
+# generate job triggered by push; Netlify build triggered by same event
 generate:
   stage: build
   except: 
@@ -6,8 +6,8 @@ generate:
     - schedules
     - triggers
   image:
-    name: antora/antora:1.1.1
-    entrypoint: [/bin/sh, -c]
+    name: antora/antora:2.0.0-rc.2
+    entrypoint: [ /bin/sh, -c ]
   cache:
     paths:
     - .cache/
@@ -26,9 +26,8 @@ trigger/netlify:
     variables:
     - $NETLIFY_BUILD_HOOK
   image:
-    # NOTE reuse antora/antora once it provides curl
-    name: byrnedo/alpine-curl
-    entrypoint: [/bin/sh, -c]
+    name: antora/antora:2.0.0-rc.2
+    entrypoint: [ /bin/sh, -c ]
   script:
   - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
 # index job triggered when production Netlify deploy succeeds
