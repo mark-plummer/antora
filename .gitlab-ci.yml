@@ -40,7 +40,7 @@ index:
     - triggers
     variables:
     # TRIGGER_ACTION defined by outgoing webhook in Netlify
-    - $TRIGGER_ACTION == "disabled"
+    - $TRIGGER_ACTION == "index"
   except:
     # variables use OR logic
     variables:
