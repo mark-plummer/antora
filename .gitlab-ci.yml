@@ -12,7 +12,7 @@ generate:
     paths:
     - .cache/
   script:
-  - antora --pull --url=https://gitlab.com/$CI_PROJECT_PATH/-/jobs/$CI_JOB_ID/artifacts/browse/public antora-playbook.yml
+  - antora --fetch --url=https://gitlab.com/$CI_PROJECT_PATH/-/jobs/$CI_JOB_ID/artifacts/browse/public antora-playbook.yml
   artifacts:
     expire_in: 1 week
     paths:
