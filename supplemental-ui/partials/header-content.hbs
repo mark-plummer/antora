@@ -7,7 +7,7 @@
         <a href="{{or site.url (or siteRootUrl siteRootPath)}}">Docs</a>
       </div>
       {{#if env.ALGOLIA_API_KEY}}
-      <div class="navbar-item">
+      <div class="navbar-item hide-for-print">
         <input id="search-input" type="text" placeholder="Search docs">
       </div>
       {{/if}}
