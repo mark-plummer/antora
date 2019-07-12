@@ -59,7 +59,7 @@ index:
   - apt-get install -y jq > /dev/null
   script:
   # only index every other day
-  #- if [ $(( $(date +%-d) % 2 )) -eq 0 ]; then echo "Skip day."; exit 0; fi
+  - if [ $(( $(date +%-d) % 2 )) -eq 0 ]; then echo "Skip day."; exit 0; fi
   # just to be safe, verify the ref name is master; exit otherwise
   - if [ "$CI_COMMIT_REF_NAME" != "master" ]; then echo "Expected ref to be master."; exit 1; fi
   - cd /root
