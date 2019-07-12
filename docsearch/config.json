@@ -32,7 +32,7 @@
     "default": {
       "lvl0": {
         "global": true,
-        "selector": ".navigation-explore .context"
+        "selector": ".nav-panel-explore .context"
       },
       "lvl1": ".doc > h1:first-of-type",
       "lvl2": ".doc .sect1 > h2:first-child",
@@ -43,7 +43,7 @@
     "versionless": {
       "lvl0": {
         "global": true,
-        "selector": ".navigation-explore .context .title"
+        "selector": ".nav-panel-explore .context .title"
       },
       "lvl1": ".doc > h1:first-of-type",
       "lvl2": ".doc .sect1 > h2:first-child",
