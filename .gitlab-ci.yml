@@ -6,7 +6,7 @@ generate:
     - schedules
     - triggers
   image:
-    name: antora/antora:2.0.0
+    name: antora/antora:2.0.1
     entrypoint: [ /bin/sh, -c ]
   cache:
     paths:
@@ -26,7 +26,7 @@ trigger/netlify:
     variables:
     - $NETLIFY_BUILD_HOOK
   image:
-    name: antora/antora:2.0.0
+    name: antora/antora:2.0.1
     entrypoint: [ /bin/sh, -c ]
   script:
   - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
