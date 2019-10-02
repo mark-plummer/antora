@@ -6,8 +6,7 @@ generate:
     - schedules
     - triggers
   image:
-    name: antora/antora:2.0.1
-    entrypoint: [ /bin/sh, -c ]
+    name: antora/antora:2.1.2
   cache:
     paths:
     - .cache/
@@ -26,8 +25,7 @@ trigger/netlify:
     variables:
     - $NETLIFY_BUILD_HOOK
   image:
-    name: antora/antora:2.0.1
-    entrypoint: [ /bin/sh, -c ]
+    name: antora/antora:2.1.2
   script:
   - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
 # index job triggered when production Netlify deploy succeeds
