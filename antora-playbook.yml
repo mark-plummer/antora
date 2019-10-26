@@ -7,11 +7,11 @@ site:
 content:
   sources:
   - url: https://gitlab.com/antora/antora.git
+    start_path: docs
     branches: v2.1.x, v2.0.x, v1.1.x
-    start_path: docs
   - url: https://gitlab.com/antora/antora-ui-default.git
-    branches: master
     start_path: docs
+    branches: master
 asciidoc:
   attributes:
     experimental: ''
