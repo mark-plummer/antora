@@ -156,7 +156,7 @@ Finally, run the `scrape` script, passing the configuration file as the first ar
 
  $ ./scrape ../config.json
 
-If that command succeeeds, it means the index is now updated.
+If that command succeeds, it means the index is now updated.
 
 == See Also
 
