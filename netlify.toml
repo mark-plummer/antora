@@ -38,5 +38,10 @@ force = true
 
 [[redirects]]
 from = "/antora/latest/*"
-to = "/antora/2.1/:splat"
+to = "/antora/2.2/:splat"
+status = 302
+
+[[redirects]]
+from = "/antora/1.0/*"
+to = "/antora/2.2/:splat"
 status = 302
