@@ -37,11 +37,16 @@ status = 301
 force = true
 
 [[redirects]]
-from = "/antora/latest/*"
-to = "/antora/2.2/:splat"
-status = 302
+from = "/antora/1.0/*"
+to = "/antora/latest/:splat"
+status = 301
 
 [[redirects]]
-from = "/antora/1.0/*"
+from = "/antora/1.1/*"
+to = "/antora/latest/:splat"
+status = 301
+
+[[redirects]]
+from = "/antora/latest/*"
 to = "/antora/2.2/:splat"
 status = 302
