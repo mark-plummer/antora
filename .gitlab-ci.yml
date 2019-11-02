@@ -1,12 +1,12 @@
 # generate job triggered by push; Netlify build triggered by same event
 generate:
   stage: build
-  except: 
+  except:
     refs:
     - schedules
     - triggers
   image:
-    name: antora/antora:2.1.2
+    name: antora/antora:2.2.0
   cache:
     paths:
     - .cache/
@@ -25,7 +25,7 @@ trigger/netlify:
     variables:
     - $NETLIFY_BUILD_HOOK
   image:
-    name: antora/antora:2.1.2
+    name: antora/antora:2.2.0
   script:
   - curl -X POST -d '' -s $NETLIFY_BUILD_HOOK
 # index job triggered when production Netlify deploy succeeds
