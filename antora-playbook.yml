@@ -1,14 +1,15 @@
 runtime:
   cache_dir: ./.cache/antora
 site:
-  title: Antora Docs
-  url: https://docs.antora.org
+  title: Antora Docs (Preview)
+  url: https://docs-preview.antora.org
   start_page: antora::index.adoc
+  robots: disallow
 content:
   sources:
   - url: https://gitlab.com/antora/antora.git
     start_path: docs
-    branches: v2.2.x, v2.1.x, v2.0.x
+    branches: master, v2.2.x, v2.1.x, v2.0.x
   - url: https://gitlab.com/antora/antora-ui-default.git
     start_path: docs
     branches: master
