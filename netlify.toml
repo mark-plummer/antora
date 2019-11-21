@@ -1,15 +1,17 @@
 [build]
 base = "netlify"
 publish = "public"
-command = """\
-node_modules/.bin/antora --fetch --generator=@antora/xref-validator ../antora-playbook.yml && \
-node_modules/.bin/antora --fetch --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml && \
-curl -o /dev/null -s -X POST -F "token=$INDEX_WEBHOOK_TOKEN" -F "ref=$BRANCH" -F "variables[TRIGGER_ACTION]=index" $INDEX_WEBHOOK_URL\
-"""
 
 [build.environment]
 NODE_VERSION = "12"
 ANTORA_CACHE_DIR = "node_modules/.cache/antora"
+
+[context.production]
+command = """\
+node_modules/.bin/antora --fetch --generator=@antora/xref-validator ../antora-playbook.yml && \
+node_modules/.bin/antora --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml && \
+curl -o /dev/null -s -X POST -F "token=$INDEX_WEBHOOK_TOKEN" -F "ref=$BRANCH" -F "variables[TRIGGER_ACTION]=index" $INDEX_WEBHOOK_URL\
+"""
 
 [context.production.environment]
 ALGOLIA_APP_ID = "E80Q5UHPOS"
@@ -20,7 +22,7 @@ GOOGLE_ANALYTICS_KEY = "UA-112324747-2"
 [context.deploy-preview]
 command = """\
 node_modules/.bin/antora --fetch --generator=@antora/xref-validator ../antora-playbook.yml && \
-node_modules/.bin/antora --fetch --url $DEPLOY_PRIME_URL --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml\
+node_modules/.bin/antora --url $DEPLOY_PRIME_URL --html-url-extension-style=indexify --redirect-facility=netlify ../antora-playbook.yml\
 """
 
 # NOTE use settings from _headers file to allow use of netlify command (not currently used)
