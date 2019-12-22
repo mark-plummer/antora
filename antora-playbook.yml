@@ -3,7 +3,7 @@ runtime:
 site:
   title: Antora Docs (Preview)
   url: https://preview.docs.antora.org
-  start_page: antora::index.adoc
+  start_page: 2.3@antora::index.adoc
   robots: disallow
 content:
   sources:
